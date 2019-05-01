@@ -1,7 +1,7 @@
 @import "https://fontlibrary.org/face/horta"; /* 'HortaRegular' */
-@import "https://ellexidecodes.github.io/Profile-Codes/free/all-google-fonts.css";
 @import "https://monstrousdev.github.io/themes/addons/user-tags.css";
 @import "https://monstrousdev.github.io/themes/addons/filter.css";
+@import "https://www.themonster.xyz/styles/google-fonts.css";
 
 /*
                                                                                                      
@@ -96,6 +96,7 @@
 *     C. Top Bar & Typing Status
 *     D. Cards and Tiles
 *     E. Buttons, Switches, and Bars
+*     F. Change SVGs
 *
 *  VI. Top Layers
 *  VII. ScrollBars
@@ -177,6 +178,20 @@
 
 /* III. Channel Area */
   /* A. Channels Header */
+#app-mount .channelNotice-1-XFjC {
+  background-color: var(--blurple-sheer);
+}
+
+#app-mount .channelNotices-41mJbj .channelNotice-1-XFjC .message-3SOT5P .btn-11C5_u {
+  background-color: var(--blurple-sheer);
+  border-color: transparent;
+  transition: all .2s ease-in-out;
+}
+
+#app-mount .channelNotices-41mJbj .channelNotice-1-XFjC .message-3SOT5P .btn-11C5_u:hover {
+  background-color: var(--blurple);
+}
+
 .container-PNkimc {
   background-color: transparent;
 }
@@ -202,7 +217,9 @@
 .contentSelectedText-3wUhMi, 
 .contentSelectedVoice-1WDIBM,
 .contentConnectedVoice-qL-YrL,
-.wrapper-2NJDcI {
+.wrapper-2NJDcI,
+#app-mount .wrapper-1ucjTd.modeSelected-1zApJ_ .content-3at_AU, 
+#app-mount .wrapper-1ucjTd.modeSelected-1zApJ_:hover .content-3at_AU {
   background: var(--veil) var(--stars) top left;
   background-attachment: fixed;
   color: var(--blurple)
@@ -212,7 +229,8 @@
 .contentHoveredText-2D9B-x, 
 .contentHoveredVoice-3p_NEO:active, 
 .contentSelectedVoice-1WDIBM:active,
-#app-mount .listeningAlong-2UPsxf {
+#app-mount .listeningAlong-2UPsxf,
+#app-mount .wrapper-1ucjTd:hover .content-3at_AU {
   background-color: transparent;
 }
 
@@ -223,7 +241,9 @@
 }
 
 .colorHoveredText-OZnAgu, 
-.colorHoveredVoice-1kucsK {
+.colorHoveredVoice-1kucsK,
+#app-mount .wrapper-1ucjTd:not(.modeSelected-1zApJ_):hover .name-3_Dsmg,
+#app-mount .wrapper-1ucjTd:not(.modeSelected-1zApJ_):hover svg {
   color: var(--blurple);
   opacity: 1;
 }
@@ -299,6 +319,20 @@
   background-color: var(--uno) !important;
 }
 
+.users-i_3-kL {
+  background-color: var(--blurple-sheer);
+  color: white;
+}
+
+.total-3tKGEB {
+  background-color: var(--blurple);
+  color: white;
+}
+
+.total-3tKGEB::after {
+  border-right-color: var(--blurple);
+}
+
   /* D. Private Channels */
 .searchBar-6Kv8R2 {
   -webkit-box-shadow: none;
@@ -342,12 +376,16 @@
   height: 90%;
 }
 
-.scrollerWrap-1IAIlv .scroller-2TZvBN {
-  padding: 0px 0 20px 10px;
-  width: 58px !important;
+#app-mount .wrapper-1Rf91z .scrollerWrap-1IAIlv .scroller-2TZvBN>.listItem-2P_4kh:first-child .wrapper-25eVIn .svg-1X37T1 {
+  height: 100% !important;
+  width: 100% !important;
 }
 
-.scrollerWrap-1IAIlv .scroller-2TZvBN>.container-1ETFDs {
+.scrollerWrap-1IAIlv .scroller-2TZvBN {
+  padding: 10px 0 20px 0px;
+}
+
+.wrapper-1Rf91z .scrollerWrap-1IAIlv .scroller-2TZvBN>.listItem-2P_4kh:first-child {
   position: absolute;
   top: -45px;
   left: 0px;
@@ -356,22 +394,35 @@
   justify-content: center;
 }
 
-.homeButton-2Cw51C {
-  background-color: rgb(255, 255, 255) !important;
+.wrapper-1Rf91z .scrollerWrap-1IAIlv .scroller-2TZvBN>.listItem-2P_4kh:first-child .pill-2uzAFe,
+.homeIcon-tEMBK1 path {
+  display: none;
+}
+
+.pill-31IEus .item-2hkk8m {
+  background-color: var(--blurple);
+}
+
+#app-mount .button-OhfaWu {
+  background-color: transparent;
+}
+
+.homeIcon-tEMBK1 {
+  background-color: white;
   -webkit-mask: url(https://ellexidecodes.github.io/Discord-Themes/assets/home.svg);
   -webkit-mask-size: 45px;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   transform: scale(0.5);
   transition: background-color .2s ease-in-out;
+  -webkit-mask-position: center;
+  margin-left: 0px;
+  height: 100% !important;
+  width: 100% !important;
 }
 
-.homeButton-2Cw51C:hover {
+.button-OhfaWu.selected-wSa2KV .homeIcon-tEMBK1 {
   background-color: var(--blurple) !important;
-}
-
-.homeButton-2Cw51C defs, .homeButton-2Cw51C g {
-  display: none;
 }
 
 #app-mount .downloadProgressCircle-yTgLNF {
@@ -393,9 +444,7 @@
   opacity: 1
 }
 
-.container-2td-dC.audio-2KA0-x::after,
-.container-2td-dC.video-2jNDI4::after,
-.selected-nT-gM3:before, .unread-2OHH1w:before {
+#app-mount .iconBadge-2wi9r4 {
   background-color: var(--blurple) !important;
   transition: all .2s ease-in-out;
 }
@@ -455,12 +504,17 @@
 #app-mount .title-3qD0b-, 
 #app-mount .titleCall-_b9o8P,
 #app-mount .headerBar-UHpsPw,
+#app-mount .container-1r6BKw,
 #app-mount .header-39GIC8,
 #app-mount .chat-3bRxxu .channelTextArea-rNsIhG,
 #app-mount .friendsTable-133bsv .friendsRow-2yicud:hover,
 #app-mount .video-1FfuMD {
   background: var(--veil) var(--stars) top left !important;
   background-attachment: fixed;
+}
+
+#app-mount .children-19S4PO:after {
+  display: none;
 }
 
 #app-mount .gameUpdates-2GPqBU {
@@ -557,6 +611,10 @@
 #app-mount .emptyStateHeader-1ADtcL, 
 #app-mount .header-2HrZI4 {
   padding: 0 20px;
+}
+
+.chat-3bRxxu>.content-yTz4x3 .messages-3amgkR .containerCozy-jafyvG:last-child {
+  padding-bottom: 30px;
 }
 
 .chat-3bRxxu .channelTextArea-rNsIhG {
@@ -809,7 +867,9 @@
 
 
   /* C. Top Bar & Typing Status */
-#app-mount .search-2oPWTC .searchBar-3dMhjb {
+#app-mount .search-2oPWTC .searchBar-3dMhjb,
+#app-mount .darkTheme-3uETC4.container-2XeR5Z,
+#app-mount .container-cMG81i {
   background: transparent;
 }
 
@@ -885,7 +945,10 @@
 #app-mount .card-7JP0BX,
 #app-mount .audioControls-2HsaU6, 
 #app-mount .videoControls-2kcYic,
-#app-mount .tile-2OwFgW {
+#app-mount .tile-2OwFgW,
+#app-mount .wrapper-3UweLa,
+#app-mount .multipleIconWrapper-1PjkRO, 
+#app-mount .section-2VKIPC {
   background: var(--sheer) var(--stars) top left;
   background-attachment: fixed;
 }
@@ -934,7 +997,9 @@
 #app-mount .entitledHeader-3LRNDT,
 #app-mount .cardPrimary-1Hv-to,
 #app-mount .cardPrimaryEditable-3KtE4g,
-#app-mount .genreTag-3QLRUJ {
+#app-mount .genreTag-3QLRUJ,
+#app-mount  .content-35aVm0,
+#app-mount .emptyCard-3CNsz2 {
   background: var(--blurple-sheer) var(--stars) top left fixed;
 }
 
@@ -1011,12 +1076,25 @@
 #app-mount .accountBtnInner-sj5jLs,
 #app-mount .button-mM-y8i,
 #app-mount .restoreButton-22-SIW,
-#app-mount .topPill-30KHOu .itemSelected-1qLhcL {
+#app-mount .topPill-30KHOu .itemSelected-1qLhcL,
+#app-mount .side-8zPYf6 .themed-OHr7kt.selected-3s45Ha.item-PXvHYJ, 
+#app-mount .topPill-30KHOu .themed-OHr7kt.selected-3s45Ha.item-PXvHYJ,
+#app-mount #bd-settings-sidebar .ui-tab-bar-item.selected {
   background-color: var(--veil);
 }
 
-#app-mount .topPill-30KHOu .itemSelected-1qLhcL {
+#app-mount .topPill-30KHOu .itemSelected-1qLhcL,
+#app-mount .side-8zPYf6 .themed-OHr7kt.selected-3s45Ha.item-PXvHYJ, 
+#app-mount .topPill-30KHOu .themed-OHr7kt.selected-3s45Ha.item-PXvHYJ,
+#app-mount #bd-settings-sidebar .ui-tab-bar-item.selected {
   color: var(--blurple)
+}
+
+#app-mount .side-8zPYf6 .themed-OHr7kt.selected-3s45Ha.item-PXvHYJ:hover, 
+#app-mount .topPill-30KHOu .themed-OHr7kt.selected-3s45Ha.item-PXvHYJ:hover,
+#app-mount #bd-settings-sidebar .ui-tab-bar-item.selected:hover {
+  background-color: var(--greyple-sheer);
+  color: var(--greyple);
 }
 
 #app-mount .accountBtnInner-sj5jLs:hover,
@@ -1039,12 +1117,101 @@
 }
 
 #app-mount .moreUsers-1s5Her,
-#app-mount .lookFilled-1Gx00P.colorGrey-2DXtkV:hover {
+#app-mount .lookFilled-1Gx00P.colorGrey-2DXtkV:hover,
+#app-mount .lookFilled-1Gx00P.colorBrand-3pXr91,
+#app-mount .side-8zPYf6 .themed-OHr7kt.item-PXvHYJ:hover, 
+#app-mount .topPill-30KHOu .themed-OHr7kt.item-PXvHYJ:hover,
+#app-mount #bd-settings-sidebar .ui-tab-bar-item:hover {
   background-color: var(--blurple-sheer);
+}
+
+#app-mount .lookFilled-1Gx00P.colorBrand-3pXr91:hover {
+  background-color: var(--blurple)
 }
 
 #app-mount .lookFilled-1Gx00P.hoverGreen-1gjdJc.hasHover-3X1-zV:hover {
   background-color: var(--online-sheer);
+}
+
+  /* F. Change SVGs */
+svg[name="Nova_Bell"] path,
+svg[name="Nova_BellOff"] path,
+svg[name="Nova_Pin"] path,
+svg[name="Nova_People"] path,
+svg[name="Nova_At"] path,
+svg[name="Nova-CallJoin"] path,
+svg[name*="PersonWaving"] path,
+svg[name*="NitroWheel"] path,
+svg[name*="Library"] path,
+svg[name*="Activity"] path{
+  display: none;
+}
+
+svg[name="Nova_Bell"] {
+  background-color: currentColor;
+  -webkit-mask: url(https://monstrousdev.github.io/themes/assets/svgs/bell.svg) center/100% no-repeat;
+  mask: url(https://monstrousdev.github.io/themes/assets/svgs/bell.svg) center/100% no-repeat;
+}
+
+svg[name="Nova_BellOff"] {
+  background-color: currentColor;
+  -webkit-mask: url(https://monstrousdev.github.io/themes/assets/svgs/bell-off.svg) center/100% no-repeat;
+  mask: url(https://monstrousdev.github.io/themes/assets/svgs/bell.svg) center/100% no-repeat;
+}
+
+svg[name="Nova_Pin"] {
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' name='Mention'…56,16.62768 L18.57808,16.8728 L18.57808,16.8728 Z'%3E%3C/path%3E%3C/svg%3E") center/100% no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' name='Mention'…56,16.62768 L18.57808,16.8728 L18.57808,16.8728 Z'%3E%3C/path%3E%3C/svg%3E") center/100% no-repeat;
+  transform: scaleX(-1)
+}
+
+svg[name="Nova_People"] {
+  background-color: currentColor;
+  -webkit-mask: url(https://monstrousdev.github.io/themes/assets/home-tabs/friends.svg) center/100% no-repeat;
+  mask: url(https://monstrousdev.github.io/themes/assets/home-tabs/friends.svg) center/100% no-repeat;
+}
+
+svg[name="Nova_At"] {
+  background-color: currentColor;
+  -webkit-mask: url(https://monstrousdev.github.io/themes/assets/svgs/mentioned-two.svg) center/95% no-repeat;
+  mask: url(https://monstrousdev.github.io/themes/assets/svgs/mentioned-two.svg) center/95% no-repeat;
+}
+
+svg[name="Nova_CallJoin"] {
+  background-color: currentColor;
+  -webkit-mask: url(https://monstrousdev.github.io/themes/assets/svgs/phone-call.svg) center/100% no-repeat;
+  mask: url(https://monstrousdev.github.io/themes/assets/svgs/phone-call.svg) center/100% no-repeat;
+}
+
+svg[name="Nova_CallVideo"] {
+  background-color: currentColor;
+  -webkit-mask: url(https://monstrousdev.github.io/themes/assets/svgs/video-call.svg) center/100% no-repeat;
+  mask: url(https://monstrousdev.github.io/themes/assets/svgs/video-call.svg) center/100% no-repeat;
+}
+
+svg[name*="PersonWaving"] {
+  color: inherit !important;
+  background-color: currentColor;
+  -webkit-mask: url(https://monstrousdev.github.io/themes/assets/home-tabs/friends.svg) center/100% no-repeat;;
+}
+
+svg[name*="NitroWheel"] {
+  color: inherit !important;
+  background-color: currentColor;
+  -webkit-mask: url(https://monstrousdev.github.io/themes/assets/home-tabs/nitro.svg) center/100% no-repeat;;
+}
+
+svg[name*="Library"] {
+  color: inherit !important;
+  background-color: currentColor;
+  -webkit-mask: url(https://monstrousdev.github.io/themes/assets/home-tabs/library.svg) center/100% no-repeat;;
+}
+
+svg[name*="Activity"] {
+  color: inherit !important;
+  background-color: currentColor;
+  -webkit-mask: url(https://monstrousdev.github.io/themes/assets/home-tabs/activity.svg) center/100% no-repeat;;
 }
 
 /* VI. Top Layers */
@@ -1503,30 +1670,26 @@
 }
 
   /* E. Tooltips & Notices */
-.tooltip-1OS-Ti {
+.tooltip-2QfLtc {
   border-radius: 5px !important;
 }
+
+#app-mount .tooltip-2QfLtc.tooltipRed-8-9NeP {
+  background: var(--dnd);
+}
+
+#app-mount .tooltipRed-8-9NeP .tooltipPointer-3ZfirK {
+  border-top-color: var(--dnd);
+}
     
-.tooltip-1OS-Ti,
+#app-mount .tooltip-2QfLtc,
 #app-mount .bubble-3we2di {
-  background: var(--blurple) !important;
+  background: var(--blurple);
 }
     
-.tooltip-1OS-Ti.right-KM_vfY:after {
-  border-right-color: var(--blurple) !important;
-}
-    
-.tooltip-1OS-Ti.top-1pTh1F:after,
+#app-mount .tooltipBlack-PPG47z .tooltipPointer-3ZfirK,
 #app-mount .bubble-3we2di:before {
   border-top-color: var(--blurple) !important;
-}
-    
-.tooltip-1OS-Ti.left-1wV7VO:after {
-  border-left-color: var(--blurple) !important;
-}
-    
-.tooltip-1OS-Ti.bottom-19kp6S:after {
-  border-bottom-color: var(--blurple) !important;
 }
 
 #app-mount .notice-2FJMB4 {
@@ -1547,19 +1710,19 @@
 
 /* tropix's fade in tooltip anim */
     
-.tooltips-FhwIyl .tooltip-1OS-Ti.right-KM_vfY {
+.layerContainer-yqaFcK .tooltip-2QfLtc.tooltipRight-2JM5PQ {
   animation: fadeFromRight 200ms
 }
-    
-.tooltips-FhwIyl .tooltip-1OS-Ti.bottom-19kp6S {
+
+.layerContainer-yqaFcK .tooltip-2QfLtc.tooltipBottom-3ARrEK {
   animation: fadeFromBottom 200ms
 }
-    
-.tooltips-FhwIyl .tooltip-1OS-Ti.left-1wV7VO {
+
+.layerContainer-yqaFcK .tooltip-2QfLtc[class*="tooltipLeft-"] {
   animation: fadeFromLeft 200ms
 }
-    
-.tooltips-FhwIyl .tooltip-1OS-Ti.top-1pTh1F {
+
+.layerContainer-yqaFcK .tooltip-2QfLtc.tooltipTop-XDDSxx{
   animation: fadeFromTop 200ms;
 }
 
@@ -1618,6 +1781,14 @@
   border: 1px solid rgb(0, 0, 0);
   height: 326px;
   width: 344px;
+}
+
+#app-mount .diversitySelector-tmmMv0 .popout-2nUePc {
+  width: unset;
+}
+
+#app-mount .lightTheme-3LGLQs.container-2XeR5Z {
+  background: transparent
 }
 
 #bda-qem {
@@ -2009,7 +2180,8 @@ background-attachment: fixed;
 }
 
   /* F. Reactions Modal & Server Invite Modal */
-#app-mount .sidebar-1-SQro {
+#app-mount .sidebar-1-SQro,
+#app-mount  .reactors-Blmlhw {
   background: linear-gradient(var(--blurple-sheer), transparent 80%), var(--sheer) var(--stars) top left fixed;
 }
 

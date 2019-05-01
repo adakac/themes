@@ -141,6 +141,10 @@
   background-color: var(--primary-color) !important;
 }
 
+#app-mount .users-i_3-kL {
+  background-color: var(--secondary-color)
+}
+
 /* 6. Account Area */
 .container-2Thooq {
   background: var(--secondary-color) !important;
@@ -199,6 +203,10 @@
 
 #app-mount .searchResultsContainer-1ma_dc {
   background-color: var(--secondary-color);
+}
+
+#app-mount .container-1r6BKw {
+  background: var(--quaternary-color);
 }
 
 
